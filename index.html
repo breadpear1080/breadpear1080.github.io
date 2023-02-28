@@ -90,9 +90,13 @@
         }
     </style>
     <script>
+        import { createClient } from '@supabase/supabase-js'
+        // Create a single supabase client for interacting with your database
+        const supabase = createClient('https://breadpear1080.supabase.co', 'public-anon-key')
         document.getElementById("button").onclick = function() {func()};
-        function func() {
-            document.getElementById("info").innerHTML = "YOU CLICKED ME!";
+        async function func() {
+            var text = await supabase.from('username').select();
+            document.getElementById("info").innerHTML = text;
         }
     </script>
 </html>
