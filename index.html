@@ -1,102 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <head></head>
-    <body>
-        <form action="action_page.php" method="post">
-            <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-        
-            <button type="submit">Login</button>
-            </div>
-        </form>
-        <button id="button">get info</button>
-        <p id="info"></p>
-    </body>
-    <style>/* Bordered form */
-        form {
-          border: 3px solid #f1f1f1;
-        }
-        
-        /* Full-width inputs */
-        input[type=text], input[type=password] {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          display: inline-block;
-          border: 1px solid #ccc;
-          box-sizing: border-box;
-        }
-        
-        /* Set a style for all buttons */
-        button {
-          background-color: #04AA6D;
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          cursor: pointer;
-          width: 100%;
-        }
-        
-        /* Add a hover effect for buttons */
-        button:hover {
-          opacity: 0.8;
-        }
-        
-        /* Extra style for the cancel button (red) */
-        .cancelbtn {
-          width: auto;
-          padding: 10px 18px;
-          background-color: #f44336;
-        }
-        
-        /* Center the avatar image inside this container */
-        .imgcontainer {
-          text-align: center;
-          margin: 24px 0 12px 0;
-        }
-        
-        /* Avatar image */
-        img.avatar {
-          width: 40%;
-          border-radius: 50%;
-        }
-        
-        /* Add padding to containers */
-        .container {
-          padding: 16px;
-        }
-        
-        /* The "Forgot password" text */
-        span.psw {
-          float: right;
-          padding-top: 16px;
-        }
-        
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-          span.psw {
-            display: block;
-            float: none;
-          }
-          .cancelbtn {
-            width: 100%;
-          }
-        }
-    </style>
-    <script>
-        import { createClient } from '@supabase/supabase-js'
-        // Create a single supabase client for interacting with your database
-        const supabase = createClient('https://breadpear1080.supabase.co', 'public-anon-key')
-        document.getElementById("button").onclick = function() {func()};
-        async function func() {
-            var text = await supabase.from('username').select();
-            document.getElementById("info").innerHTML = text;
-        }
-    </script>
+
+<head>
+  <title>My Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Battre le fer pendant qu'il est chaud.</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Home Page</h2>
+    <p>Vous ne pouvez pas frapper le fer quand il fait froid, n'est-ce pas? 😉</p>
+
+  </main>
+  <footer>
+    <p>&copy; *$NFdfogdg8WT$#JKjg8:Oge4th9</p>
+  </footer>
+</body>
+
 </html>

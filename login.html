@@ -1,0 +1,173 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Battre le fer pendant qu'il est chaud.</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+  <h1>Admin Login</h1>
+  <form action="login.php" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+ 
+  <footer>
+    <p>&copy; *$NFdfogdg8WT$#JKjg8:Oge4th9</p>
+  </footer>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Battre le fer pendant qu'il est chaud.</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Contact Us</h1>
+  <p>Fill out the form below to get in touch with us.</p>
+  UserName: <input type="text" id="UserName"><br><br>
+  Password:&nbsp;&nbsp; <input type="text" id="Password"><br><br>
+  <button onclick="generateTable()">Submit</button>
+  <button onclick="clearTable()">Clear</button>
+
+	<div id="tableContainer"></div>
+
+	<script>
+		function clearTable()
+		{
+			//Clear the Table
+			var container = document.getElementById("tableContainer").innerHTML = "";
+			container.ReplaceChildren();	
+		}
+		
+		function generateTable() 
+		{
+			// Get the container element
+			var container = document.getElementById("tableContainer");
+			
+			// Create a new table element
+			var table = document.createElement("table");
+
+			// Create a new row element
+			var row = document.createElement("tr");
+
+			// Create the header cells and append them to the row
+			var headers = ["UserName", "Password", "Name", "SSN"];
+			for (var i = 0; i < headers.length; i++) 
+			{
+				var headerCell = document.createElement("th");
+				headerCell.innerHTML = headers[i];
+				row.appendChild(headerCell);
+			}
+			
+			// Append the row to the table
+			table.appendChild(row);
+
+			var value = document.getElementById("UserName").value;
+			
+			if (value === "1") 
+			{
+				// Create some data rows and append them to the table
+				var data = [
+					[value, "Password", "John Doe", "123-45-6789"]
+				];
+
+				for (var i = 0; i < data.length; i++) 
+				{
+					var dataRow = document.createElement("tr");
+					for (var j = 0; j < data[i].length; j++) 
+					{
+						var dataCell = document.createElement("td");
+						dataCell.innerHTML = data[i][j];
+						dataRow.appendChild(dataCell);
+					}
+					table.appendChild(dataRow);
+				}			
+			} 
+			else if (value.indexOf("' or 1=1 --") != -1) 
+			{
+				// Create some data rows and append them to the table
+				var data = [
+					["John", "Password", "John Doe", "123-45-6789"],
+					["Maria", "Hello", "Maria Rodriguez", "341-56-7890"],
+					["Robert", "Secure", "Robert Rodriguez", "567-12-7890"],
+					["The message you are looking for is", "https://drive.google.com/drive/folders/1k5pxyMsjmXk9cyYy5B_W2A6MeaLpPCdm", "If you haven't found the riddle yet go search again. :) ", "234-54-3156"],
+					["Chris", "Starlord", "Chris Pratt", "890-12-3456"],
+					["god","god","actual god","192-92-2345"]
+					
+				];
+
+				for (var i = 0; i < data.length; i++) 
+				{
+					var dataRow = document.createElement("tr");
+					for (var j = 0; j < data[i].length; j++) 
+					{
+						var dataCell = document.createElement("td");
+						dataCell.innerHTML = data[i][j];
+						dataRow.appendChild(dataCell);
+					}
+					table.appendChild(dataRow);
+				}					
+			} 		
+			else
+			{
+				var data = [
+					["", "", "", ""]
+				];
+
+				for (var i = 0; i < data.length; i++) 
+				{
+					var dataRow = document.createElement("tr");
+					for (var j = 0; j < data[i].length; j++) 
+					{
+						var dataCell = document.createElement("td");
+						dataCell.innerHTML = data[i][j];
+						dataRow.appendChild(dataCell);
+					}
+					table.appendChild(dataRow);
+				}			
+			}
+
+			// Add the table to the container
+			container.appendChild(table);
+		}
+	</script> 
+  <br>
+  <footer>
+    <p>&copy; *$NFdfogdg8WT$#JKjg8:Oge4th9</p>
+  </footer>
+</body>
+</html>
